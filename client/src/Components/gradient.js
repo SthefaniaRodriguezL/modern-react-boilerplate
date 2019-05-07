@@ -33,7 +33,9 @@ class Gradient extends React.Component {
 console.log("i am dataaaaaa" + this.state.colors)
     return (
       <div>
-
+      <canvas id="myCanvas" width="200" height="100">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
         </div>
     );
   }
