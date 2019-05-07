@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-// RHL only for front end development
-import { hot } from 'react-hot-loader';
+import ReactDOM from 'react-dom';
 
-class App extends Component {
+//components
+import Buttons from './Components/Buttons';
+
+class App extends React.Component {
+
   render() {
-    return <div>Welcome to a Modern Minimal React Boilerplate</div>;
+    return (
+		  <div>
+        <h1>CSS GRADIENT</h1>
+         <h3>Gradient Generator for Linear and Radial CSS Color Gradients</h3>
+          <Buttons />
+      </div>
+    );
   }
 }
-// hot export works with RHL. Remove line 11 when starting fullstack integration
-export default hot(module)(App);
-// Uncomment line 13 & delete line 11 when starting fullstack integration
-// export default App;
+
+export default App;
