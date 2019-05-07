@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
 //components
-import Buttons from './Components/Buttons';
+import Gradient from './Components/gradient';
 
 class App extends React.Component {
 
@@ -11,7 +10,7 @@ class App extends React.Component {
 		  <div>
         <h1>CSS GRADIENT</h1>
          <h3>Gradient Generator for Linear and Radial CSS Color Gradients</h3>
-          <Buttons />
+          <Gradient />
       </div>
     );
   }
