@@ -46,10 +46,10 @@ class Gradient extends React.Component {
         </div>
         <div>
           <div><h5>DIRECTION:</h5></div>
-          <button type="Top">Top</button>
-          <button type="TopRight">Top Right</button>
-          <button type="Right">Right</button>
-          <button type="BottomRight">Bottom right</button>
+          <button type="right-direction">Top</button>
+          <button type="right-direction">Top Right</button>
+          <button type="right-direction">Right</button>
+          <button type="right-direction">Bottom right</button>
         </div>
         <div>
           <button type="Bottom">Bottom</button>
@@ -65,9 +65,11 @@ class Gradient extends React.Component {
             <button type="colorTwo" onClick={this.colorTwo}>colorTwo</button>
           </div>
             <button type="button" onClick={this.firstColor}>pick color</button>
-            <canvas id="myCanvas" width="200" height="100">
-             Your browser does not support the HTML5 canvas tag.
-            </canvas>
+            <div class="parent" class="child">
+               <canvas id="myCanvas" width="200" height="100">
+               Your browser does not support the HTML5 canvas tag.
+               </canvas>
+             </div>
           <div>
             <div><h5>COLOR FORMAT:</h5></div>
             <button type="Hex">Hex</button>
