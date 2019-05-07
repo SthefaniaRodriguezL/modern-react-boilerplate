@@ -4,27 +4,35 @@ class Gradient extends React.Component {
   constructor() {
     super();
     this.state = {
-    colors: undefined
+    colorOne: undefined,
+    colorTwo: undefined
     }
     this.firstColor = this.firstColor.bind(this);
     this.colorOne = this.colorOne.bind(this);
     this.colorTwo = this.colorTwo.bind(this);
   }
    firstColor() {
-     var randomColourOne = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
-     var randomColourTwo = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
+     console.log(this.prevState);
      var background = document.getElementById("myCanvas")
-    background.style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +")"
+    background.style.backgroundImage = "-webkit-linear-gradient("+ this.state.colorOne +" , "+ this.state.colorTwo +")"
   }
    colorOne() {
      var randomColourOne = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
+     this.setState({colorOne: randomColourOne})
      var background = document.getElementById("colorOne")
-     background.style.backgroundColor =  randomColourOne
+     background.style.backgroundColor =  this.state.colorOne
    }
    colorTwo() {
      var randomColourTwo = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16)})
+     this.setState({colorTwo: randomColourTwo})
      var background = document.getElementById("colorTwo")
-     background.style.backgroundColor = randomColourTwo
+     background.style.backgroundColor = this.state.colorTwo
+
+   }
+
+   componentDidMount() {
+     this.colorOne()
+     this.colorTwo()
 
    }
 
